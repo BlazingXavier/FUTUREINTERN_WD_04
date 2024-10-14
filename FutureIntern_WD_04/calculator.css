@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #00bcd4, #009688);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    border-radius: 20px;
+    background-color: #e0f7fa;
+    padding: 20px;
+    width: 450px;
+    box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.7), 
+                -8px -8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#display {
+    width: 90%;
+    height: 50px;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 4px 4px 8px rgba(255, 255, 255, 0.8), 
+                inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+    color: #333;
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.7), 
+                -4px -4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #b2ebf2;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.operation, .clear, .del {
+    background-color: #80deea;
+    color: white;
+}
+
+.operation:hover, .clear:hover, .del:hover {
+    background-color: #4dd0e1;
+}
+
+.btn:nth-last-child(1) {
+    grid-column: span 4;
+    background-color: #ff5252;
+}
+
+.btn:nth-last-child(1):hover {
+    background-color: #ff5252;
+}
